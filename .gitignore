@@ -47,3 +47,6 @@ Thumbs.db
 
 # Package lock json
 package-lock.json
+
+# Environment files to be deleted
+./src/environment/*

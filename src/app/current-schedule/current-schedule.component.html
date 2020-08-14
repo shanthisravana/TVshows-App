@@ -1,1 +1,14 @@
-<p>current-schedule works!</p>
+
+<div class="container">
+  <img [src]='current.showimage' alt="Avatar" class="image" >
+  <div class="overlay">
+    <div class="text">Show Time:{{current.showscheduletime}}</div>
+   
+    <div class="text">Show Days: {{current.showscheduledays}}</div>
+  
+    <div class="text">Run time:{{current.showruntime}} min</div>
+
+    <div class="text">Show Name:{{current.showname}}</div>
+  </div>
+  <div id="show_name">{{current.showname}}</div>
+</div>
