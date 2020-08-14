@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ISearchShow } from '../isearch-show'
 
 @Component({
   selector: 'app-search-show',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchShowComponent implements OnInit {
 
-  constructor() { }
+  current: ISearchShow
+  constructor() {
+    this.current = {
+      name: 'Girls',
+      language: 'English',
+      genres: 'Drama',
+      runtime: 80,
+      rating: 4.5,
+      days: 'Monday',
+      time: new Date(),
+      network: 'HBO'
+    }
+   }
 
   ngOnInit(): void {
   }
