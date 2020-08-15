@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ISeasonsData } from './iseasonsdata';
+import { ISeasonsData } from './iseasons-data';
 import { ISeasons } from './iseasons';
 
 @Injectable({
@@ -18,7 +18,7 @@ export class SeasonsService {
     return {
       seasonId: data.id,
       episodeNumber: data.number,
-      premierDate: data.premiereDate,
+      premiereDate: data.premiereDate,
       episodeName: data.name,
       episodeOrder: data.episodeOrder,
       image: `http://shows/:id/images`,

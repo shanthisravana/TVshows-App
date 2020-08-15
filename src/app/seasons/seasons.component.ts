@@ -13,7 +13,7 @@ export class SeasonsComponent implements OnInit {
     this.current = {
       seasonId: 5,
       episodeNumber: 13,
-      premierDate: 'May 4, 2010',
+      premiereDate: 'May 4, 2010',
       episodeName: 'The Girls',
       episodeOrder: 4,
       image: '',

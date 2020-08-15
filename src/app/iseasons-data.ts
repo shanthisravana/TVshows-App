@@ -1,7 +1,7 @@
 export interface ISeasonsData {
   seasonId: id,
   episodeNumber: number,
-  premierDate: premiereDate,
+  premiereDate: premiereDate,
   episodeName: name,
   episodeOrder: episodeOrder,
   summary: summary
