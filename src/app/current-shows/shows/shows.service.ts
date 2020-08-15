@@ -16,7 +16,7 @@ export class ShowsService {
     return this.httpClient.get<ICurrentShowsData>(`http://api.tvmaze.com/shows`);
   }
 
-  transformToICurrentSchedule(data :ICurrentShowsData) : ICurrentShows{
+  transformToICurrentShows(data :ICurrentShowsData) : ICurrentShows{
   
     return {
     showid : data.show.id,
