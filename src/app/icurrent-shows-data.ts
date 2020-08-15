@@ -1,4 +1,4 @@
-export interface ICurrentScheduleData {
+export interface ICurrentShowsData {
   show : {
     id : number,
     name : string,
@@ -21,6 +21,10 @@ export interface ICurrentScheduleData {
       medium : string
     },
     summary : string
-
+    _links : {
+      self : {
+        href : string
+      }
+    }
   }
 }

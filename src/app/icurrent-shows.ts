@@ -1,4 +1,4 @@
-export interface ICurrentSchedule {
+export interface ICurrentShows {
   showid: Number
   showname : string
   showlanguage : string
@@ -10,4 +10,5 @@ export interface ICurrentSchedule {
   showsummary :string
   showcountry : string
   showruntime : Number
+  showhref : string
 }

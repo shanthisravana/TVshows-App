@@ -3,20 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CurrentScheduleComponent } from './current-schedule/current-schedule.component';
-import { ScheduleService } from './current-schedule/schedule/schedule.service';
+import { CurrentShowsComponent } from './current-shows/current-shows.component';
+import { ShowsService } from './current-shows/shows/shows.service';
 import { HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    CurrentScheduleComponent
+    CurrentShowsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ScheduleService],
+  providers: [ShowsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

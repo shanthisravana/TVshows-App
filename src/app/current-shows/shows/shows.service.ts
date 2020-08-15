@@ -1,22 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {ICurrentScheduleData} from '../../icurrent-schedule-data';
-import { ICurrentSchedule } from '../../icurrent-schedule';
+import {ICurrentShowsData} from '../../icurrent-shows-data';
+import { ICurrentShows } from '../../icurrent-shows';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class ScheduleService {
+export class ShowsService {
 
   constructor(private httpClient:HttpClient) { }
   
-  getcurrentschedule(country:string){
-    return this.httpClient.get<ICurrentScheduleData>(`http://api.tvmaze.com/schedule?country=${country}`);
+  getcurrentshows(){
+    return this.httpClient.get<ICurrentShowsData>(`http://api.tvmaze.com/shows`);
   }
 
-  transformToICurrentSchedule(data :ICurrentScheduleData) : ICurrentSchedule{
+  transformToICurrentSchedule(data :ICurrentShowsData) : ICurrentShows{
+  
     return {
     showid : data.show.id,
     showname : data.show.name,
@@ -28,7 +29,8 @@ export class ScheduleService {
     showimage :data.show.image.medium,
     showsummary :data.show.summary,
     showcountry : data.show.country.code,
-    showruntime : data.show.runtime
+    showruntime : data.show.runtime,
+    showhref : data.show._links.self.href
     };
 
   }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CurrentScheduleComponent } from './current-schedule.component';
+import { CurrentShowsComponent } from './current-shows.component';
 
-describe('CurrentScheduleComponent', () => {
-  let component: CurrentScheduleComponent;
-  let fixture: ComponentFixture<CurrentScheduleComponent>;
+describe('CurrentShowsComponent', () => {
+  let component: CurrentShowsComponent;
+  let fixture: ComponentFixture<CurrentShowsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CurrentScheduleComponent ]
+      declarations: [ CurrentShowsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CurrentScheduleComponent);
+    fixture = TestBed.createComponent(CurrentShowsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
