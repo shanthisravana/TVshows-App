@@ -11,5 +11,4 @@ export class CurrentScheduleComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
