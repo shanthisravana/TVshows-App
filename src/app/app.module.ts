@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CurrentScheduleComponent } from './current-schedule/current-schedule.component';
 import { SeasonsComponent } from './seasons/seasons.component';
+import { SeasonsService } from './seasons.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,10 @@ import { SeasonsComponent } from './seasons/seasons.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SeasonsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
