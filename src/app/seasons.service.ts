@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ISeasonsData } from './iseasons-data';
 import { ISeasons } from './iseasons';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class SeasonsService {
   constructor(private httpClient: HttpClient) { }
 
   getSeasons(episodeName: string) {
-    return this.httpClient.get<ISeasonsData>(`http://shows/:id/seasons`)
+    return this.httpClient.get<ISeasonsData>(`http://shows/:id/seasons`).pipe(map(data => this.transformToISeasons(data)))
   }
 
   transformToISeasons(data: ISeasonsData): ISeasons {

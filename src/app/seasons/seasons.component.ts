@@ -9,19 +9,11 @@ import {ISeasons} from '../iseasons';
 export class SeasonsComponent implements OnInit {
 
   current: ISeasons
-  constructor() {
-    this.current = {
-      seasonId: 5,
-      episodeNumber: 13,
-      premiereDate: 'May 4, 2010',
-      episodeName: 'The Girls',
-      episodeOrder: 4,
-      image: '',
-      summary: 'dummy description of the season shows'
-    }
+  constructor(private seasonsService: SeasonsService) {
    }
 
   ngOnInit(): void {
+    this.seasonsService.getSeasons('episodeName').subscribe(data => this.current = data)
   }
 
 }
