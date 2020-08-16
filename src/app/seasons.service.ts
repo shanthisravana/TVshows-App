@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ISeasonsData } from './iseasons-data';
+import { environment } from 'src/environments/environment';
 import { ISeasons } from './iseasons';
 import { map } from 'rxjs/operators';
 

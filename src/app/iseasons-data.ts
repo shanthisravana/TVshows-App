@@ -1,8 +1,47 @@
 export interface ISeasonsData {
-  seasonId: id,
-  episodeNumber: number,
-  premiereDate: premiereDate,
-  episodeName: name,
-  episodeOrder: episodeOrder,
-  summary: summary
+  name: [
+    {
+      string: any
+    }
+  ],
+  number: [
+    {
+      number
+    }
+  ],
+  id: [
+    {
+      number
+    }
+  ],
+  seasonId: [
+    {
+      number
+    }
+  ],
+  episodeNumber: [
+    {
+      number
+    }
+  ],
+  premiereDate: [
+    {
+      string
+    }
+  ],
+  episodeName: [
+    {
+      string
+    }
+  ],
+  episodeOrder: [
+    {
+      number
+    }
+  ],
+  summary: [
+    {
+      string
+    }
+  ]
 }
