@@ -7,6 +7,9 @@ import { CurrentScheduleComponent } from './current-schedule/current-schedule.co
 import { SeasonsComponent } from './seasons/seasons.component';
 import { SeasonsService } from './seasons.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from @angular/material/card;
+import { MatToolbarModule } from @angular/materal/toolbar;
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatToolbarModule
   ],
   providers: [SeasonsService],
   bootstrap: [AppComponent]
