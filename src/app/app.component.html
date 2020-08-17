@@ -1,19 +1,18 @@
 
-  <div style="text-align: center;">
+<div style="text-align: center;">
     <mat-toolbar color="primary">
-      TVshow App
+      <span class="gap">Home</span>
+      <span>Search</span>
+    <div fvFlex="500px">Extra Row 2
+    </div>
+      <mat-toolbar-row>Extra Row</mat-toolbar-row>
     </mat-toolbar>
-    <div>Create your search component here</div>
-    <div>
-    <mat-card>
-      <h2> Heading For Show </h2>
-      <app-seasons></app-seasons>
+  <div>
+    <mat-card>  
+      <mat-card-title>Show Seasons</mat-card-title>
+      <h2> Seasons Description Box</h2>
+    <app-seasons [current]="currentSeasons"></app-seasons>
     </mat-card>
-    </div>
-    <div>
-    <mat-card>
-      <h3>Seasons Show Box</h3>
-    <app-current-schedule></app-current-schedule>
-    </mat-card>
-    </div>
+    </div fvFlex></div>
   </div>
+</div>
