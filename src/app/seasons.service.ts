@@ -12,17 +12,15 @@ export class SeasonsService {
   constructor(private httpClient: HttpClient) { }
 
   getSeasons() {
-    return this.httpClient.get<ISeasonsData>(`http://api.tvmaze.com/shows/${seasonsID}/seasons`).pipe(map(data => this.transformToISeasons(data)))
+    return this.httpClient.get<ISeasonsData>(`http://api.tvmaze.com/shows/1/seasons`).pipe(map(data => this.transformToISeasons(data)))
   }
-
-  transformToISeasons(data: ISeasonsData): ISeasons {
+    transformToISeasons(data: ISeasonsData): ISeasons {
     return {
       seasonsId: data.id,
       seasonsUrl: data.url,
       seasonsNumber: data.number,
       premiereDate: data.premiereDate,
       episodeOrder: data.episodeOrder,
-      image: `http://static.tvmaze.com/shows/${seasonsId}/images`,
       summary: data.summary
     }
   }

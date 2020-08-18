@@ -5,5 +5,4 @@ export interface ISeasons {
   episodeOrder: number
   premiereDate: string
   summary: string
-  image: string
 }

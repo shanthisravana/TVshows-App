@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ISeasons } from './iseasons';
+import { SeasonsService } from './seasons.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,7 @@ import { ISeasons } from './iseasons';
 })
 export class AppComponent {
   currentSeasons: ISeasons
+
+  constructor (private seasonsService: SeasonsService) {}
+  }
   
-}
