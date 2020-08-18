@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ISearchShow } from '../isearch-show'
+import { SearchService } from '../search.service';
 
 @Component({
   selector: 'app-search-show',
@@ -9,20 +10,13 @@ import { ISearchShow } from '../isearch-show'
 export class SearchShowComponent implements OnInit {
 
   current: ISearchShow
-  constructor() {
-    this.current = {
-      name: 'Girls',
-      language: 'English',
-      genres: 'Drama',
-      runtime: 80,
-      rating: 4.5,
-      days: 'Monday',
-      time: new Date(),
-      network: 'HBO'
-    }
+  constructor(private searchService: SearchService) {
+    
    }
 
   ngOnInit(): void {
+    this.searchService.getSearchResult('girls').
+    subscribe(data => this.current = data)
   }
 
 }

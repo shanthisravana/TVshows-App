@@ -1,8 +1,11 @@
 <div>
   <div>
-    <span>{{current.name}}<br /></span>
-    <span>{{current.language}}, {{current.genres}}, {{current.runtime}} minutes<br/></span>
-    <span>{{current.rating}}, {{current.days}}, {{current.time | date:'shortTime'}}, {{current.network}}<br/></span>
+    <span>Show name: {{current.name}}<br/></span>
+    <span>Language: {{current.language}}<br/></span>
+    <span>Rating: {{current.rating}}<br/></span>
+    <span>Runtime: {{current.runtime}} minutes<br/></span>
+    <span>{{current.genres}}<br/></span>
+    <span>Available on {{current.network}} on {{current.days}}, at {{current.time}}<br/></span>
   </div>
   <div>
     
