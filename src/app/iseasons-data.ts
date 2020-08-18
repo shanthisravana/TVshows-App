@@ -4,5 +4,6 @@ export interface ISeasonsData {
   number: number,
   premiereDate: string,
   episodeOrder: number,
-  summary: string
+  summary: string,
+  image: string
 }
