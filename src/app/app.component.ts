@@ -11,5 +11,6 @@ export class AppComponent {
   currentSeasons: ISeasons
 
   constructor (private seasonsService: SeasonsService) {}
-  }
   
+  }
+

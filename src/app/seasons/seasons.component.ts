@@ -8,10 +8,22 @@ import { SeasonsService } from '../seasons.service';
   styleUrls: ['./seasons.component.css']
 })
 export class SeasonsComponent implements OnInit {
-  @Input () current: ISeasons
-  constructor() {
-   }
+  /* @Input () current: ISeasons */
+  current: ISeasons
+  constructor(private seasonsService: SeasonsService) {
+    this.current = {
+      seasonsId: 20
+      seasonsUrl: 'http://api/shows/1/seasons',
+      seasonsNumber: 40,
+      premiereDate: 'september',
+      episodeOrder: 5,
+      seasonsImage: ''
+    }
+    }
+    }
   ngOnInit(): void {
+     this.seasonsService.getSeasons(seasonsId).subscribe(data => this.current = data)
+     {}
     }
 
 }
