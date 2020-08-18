@@ -1,6 +1,8 @@
+import { stringify } from '@angular/compiler/src/util'
+
 export interface ICurrentShowsData {
-  show : {
-    id : number,
+      
+    id : number
     name : string,
     language: string,
     genres :[],
@@ -12,19 +14,26 @@ export interface ICurrentShowsData {
     rating : {
       average : number
     },
+    network:{
     country :{
       name : string,
       code : string,
       timezone : string
+    }
     },
     image :{
-      medium : string
+      medium : string ,
     },
-    summary : string
+    summary : string ,
     _links : {
       self : {
-        href : string
+        href : string,
       }
     }
-  }
-}
+  
+      }
+  
+
+
+ 
+

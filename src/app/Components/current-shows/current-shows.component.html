@@ -1,0 +1,21 @@
+<mat-toolbar class="toolbar" >
+  <mat-toolbar-row>
+    <span>KAL TVshow  </span>    
+    <input type="text" id="searchbox" placeholder="Search..">
+    <button type="submit"><i class="material-icons md-18">search</i></button>
+  </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      
+    </mat-toolbar-row>
+ 
+</mat-toolbar>
+<div class="container">
+  <div class="row" >
+    <div class="col-sm-3" *ngFor="let show of allshows">
+      <img [src]='show.image.medium' alt="Avatar" class="image" (click)="getshowsdetails(show.id)">
+      <div id="show_name">{{show.name}}</div>
+    </div>
+    
+  </div>
+</div>

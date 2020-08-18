@@ -1,0 +1,31 @@
+
+
+#show_name {
+  font-weight: bold;
+  text-align: center;
+  padding-right: 30px;
+}
+
+.col-sm-3 {
+  padding-bottom: 25px;
+  
+  
+}
+
+.toolbar{
+  margin-bottom: 30px;
+  width:100%;
+
+}
+
+#searchbox{
+  text-align: left;
+  margin:right;
+  width:60%;
+  margin-left: 50%;
+
+}
+
+.material-icons{
+  margin:left;
+}
