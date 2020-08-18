@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {ISeasons} from '../iseasons';
 import { SeasonsService } from '../seasons.service';
 
@@ -11,7 +11,6 @@ export class SeasonsComponent implements OnInit {
   @Input () current: ISeasons
   constructor() {
    }
-
   ngOnInit(): void {
     }
 

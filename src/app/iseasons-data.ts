@@ -1,11 +1,8 @@
 export interface ISeasonsData {
-  name: string,
-  number: number,
   id: number,
-  seasonId: number,
-  episodeNumber: number,
+  url: string,
+  number: number,
   premiereDate: string,
-  episodeName: string,
   episodeOrder: number,
   summary: string
 }

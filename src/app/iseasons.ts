@@ -1,9 +1,9 @@
 export interface ISeasons {
-  seasonId: number
-  episodeNumber: number
-  premiereDate: string
-  episodeName: string
+  seasonsId: number
+  seasonsUrl: string
+  seasonsNumber: number
   episodeOrder: number
+  premiereDate: string
   image: string
   summary: string
 }
