@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CurrentShowsComponent } from './Components/current-shows/current-shows.component';
-
+import { SeasonsEpisodesComponent } from './Components/seasons-episodes/seasons-episodes.component';
 const routes: Routes = [
- {path:'',component:CurrentShowsComponent}
-//  {path:'/show/:showid',component:}
+ {path:'',component:CurrentShowsComponent},
+ {path:'show/:showid',component:SeasonsEpisodesComponent}
   
 ];
 

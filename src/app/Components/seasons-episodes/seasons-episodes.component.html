@@ -1,0 +1,17 @@
+<div>
+  <img [src]='Scastsummary.image.medium' alt="Avatar" class="image" >
+  <div>Show Name :{{Scastsummary.name}}</div>
+  <div>Show Summary:{{Scastsummary.summary}}</div>
+  <div fxLayout="row">
+    <p *ngFor="let cast of Scastsummary._embedded.cast">{{cast.person.name}}</p>
+  </div>
+ 
+  <div>Seasons: {{seasons.length}}</div>
+  <div *ngFor="let episode of episodes">
+    <li><img [src]='episode.image.medium'></li>
+    <li>{{episode.number}}</li>
+    <li>{{episode.name}}</li>
+    <li>{{episode.summary}}</li>
+    <li>{{episode.runtime}}</li>
+  </div>
+</div>

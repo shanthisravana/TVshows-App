@@ -11,10 +11,13 @@ import { MatCard, MatCardModule } from '@angular/material/card';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { SeasonsEpisodesComponent } from './Components/seasons-episodes/seasons-episodes.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     CurrentShowsComponent,
+    SeasonsEpisodesComponent,
   
   ],
   imports: [
