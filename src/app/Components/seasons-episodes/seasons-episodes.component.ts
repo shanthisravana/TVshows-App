@@ -14,7 +14,7 @@ export class SeasonsEpisodesComponent implements OnInit {
   episodes;
   showid:number;
   seasonid:number;
-
+  evt:boolean;
   constructor(private showdetails: SEpisodesService,
     private route: ActivatedRoute) { }
 
@@ -22,12 +22,18 @@ export class SeasonsEpisodesComponent implements OnInit {
     this.showid = this.route.snapshot.params.showid;
     this.showdetails.getcastandsummary(this.showid).subscribe(data => this.Scastsummary = data);
     this.showdetails.getseasons(this.showid).subscribe(data => this.seasons = data);
+    
+    
    
   }
 
-  getseasonID(seasonId: number){
-   this.seasonid = seasonId;
-   this.showdetails.getseasonepisodes(this.seasonid).subscribe(data => this.episodes = data);
+  getseasonID(eventparam){
+   this.seasonid=eventparam.value;
+   console.log("seasonid:"+eventparam.value);
+   if (this.seasonid != undefined){
+    this.showdetails.getseasonepisodes(this.seasonid).subscribe(data => this.episodes = data);
+  }
+   
   }
 
 
