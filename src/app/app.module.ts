@@ -12,7 +12,10 @@ import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { SeasonsEpisodesComponent } from './Components/seasons-episodes/seasons-episodes.component';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,11 @@ import { SeasonsEpisodesComponent } from './Components/seasons-episodes/seasons-
     FormsModule,
     ReactiveFormsModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FlexLayoutModule,
+    MatSelectModule
   ],
   providers: [ShowsService],
   bootstrap: [AppComponent]

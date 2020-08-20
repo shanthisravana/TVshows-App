@@ -11,7 +11,7 @@ export class SEpisodesService {
   constructor(private httpClient:HttpClient) { }
 
   getcastandsummary(showId:number){
-
+    console.log("showid:"+ showId);
     return this.httpClient.get<IShowCastAndSummaryData>(`http://api.tvmaze.com/shows/${showId}?embed=cast`);
 
   }
@@ -23,6 +23,7 @@ export class SEpisodesService {
   
  getseasonepisodes(seasonId:number)
  {
+   console.log("season id:"+seasonId);
    return this.httpClient.get<IShowEpisodesData>(`http://api.tvmaze.com/seasons/${seasonId}/episodes`);
  }
 }

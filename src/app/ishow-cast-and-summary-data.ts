@@ -1,3 +1,5 @@
+import { DecimalPipe } from '@angular/common';
+
 export interface IShowCastAndSummaryData {
   id : number
   name : string
@@ -15,6 +17,11 @@ export interface IShowCastAndSummaryData {
     ]
 
     }
+    schedule :{
+      time : string
+      days :[]
+    }
+    rating : number
   }
 
 
