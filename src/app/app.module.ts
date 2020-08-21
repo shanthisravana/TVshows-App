@@ -16,11 +16,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatSelectModule} from '@angular/material/select';
+import { CurrentScheduleComponent } from './Components/current-schedule/current-schedule.component';
+import { ScheduleService } from './Services/schedule.service';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
     CurrentShowsComponent,
     SeasonsEpisodesComponent,
+    CurrentScheduleComponent,
   
   ],
   imports: [
@@ -36,7 +40,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatFormFieldModule,
     MatInputModule,
     FlexLayoutModule,
-    MatSelectModule
+    MatSelectModule,
+    CommonModule
   ],
   providers: [ShowsService],
   bootstrap: [AppComponent]

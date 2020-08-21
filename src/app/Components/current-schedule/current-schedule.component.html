@@ -1,0 +1,14 @@
+<div *ngIf="schedules">
+  <h3>Today's Schedule {{currentdate}}</h3>
+  <div class="col-sm-3" *ngFor="let schedule of schedules">
+    <div >
+      
+    <mat-card>
+      <mat-card-content>{{schedule?.show.name}}</mat-card-content>
+      <mat-card-content>{{schedule?.show.schedule.time}}</mat-card-content>
+      <mat-card-content>{{schedule?.show.network.name}}</mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  </div>
+
