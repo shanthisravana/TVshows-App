@@ -15,16 +15,21 @@ import { SeasonsEpisodesComponent } from './Components/seasons-episodes/seasons-
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { CurrentScheduleComponent } from './Components/current-schedule/current-schedule.component';
 import { ScheduleService } from './Services/schedule.service';
 import { CommonModule } from '@angular/common';
+import { SearchService } from './../app/Services/search.service';
+import { SearchShowComponent } from './../app/Components/search-show/search-show.component';
+import { SearchbarComponent } from './../app/Components/searchbar/searchbar.component';
 @NgModule({
   declarations: [
     AppComponent,
     CurrentShowsComponent,
     SeasonsEpisodesComponent,
     CurrentScheduleComponent,
+    SearchbarComponent,
+    SearchShowComponent
   
   ],
   imports: [
@@ -43,7 +48,7 @@ import { CommonModule } from '@angular/common';
     MatSelectModule,
     CommonModule
   ],
-  providers: [ShowsService],
+  providers: [ShowsService,SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

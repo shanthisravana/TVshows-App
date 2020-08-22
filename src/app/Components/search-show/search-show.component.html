@@ -1,0 +1,42 @@
+
+<!--
+<header>
+
+  <div class="container">
+<a href="#" class="logo">KAL Academy TV</a>
+
+<input>
+<nav>
+
+  <ul>
+    <li><a href="#" router-link="/">Home</a></li>
+    <li><a href="#" router-link="/">Drama</a></li>
+    <li><a href="#" router-link="/">Action</a></li>
+    <li><a href="#" router-link="/">Comedy</a></li>
+
+    
+  </ul>
+</nav>
+
+
+  </div>
+</header>
+-->
+<div *ngIf="searchShow">
+
+  <div>
+    <!--<span>Number of shows is {{searchShow .length}}, {{searchShow.country}}</span>--> 
+    <div *ngFor="let s of searchShow; let i = index">
+    <div  class="showresult">
+       <!--<img [src]="s.image" /> -->
+          
+    <img [src]="s.image"  width ="250" height="350">
+      <div> <mat-card-title>{{ s.showName }}</mat-card-title>
+    <mat-card-subtitle>Average Rating : {{s.avgRating}}</mat-card-subtitle>
+  </div> 
+    </div>
+    
+    <br/>
+</div>
+</div>
+
