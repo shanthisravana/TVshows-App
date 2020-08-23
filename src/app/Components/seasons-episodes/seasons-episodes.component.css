@@ -12,6 +12,11 @@ mat-form-field{
 .details{
   display:table;
   float:left;
-  
+  font-weight: bold;
+  width:100%;
+  height:100%;
+  margin-top: 15px;
+  background-color: #3ed3a6 ;
+  border-style: groove;
 }
 
