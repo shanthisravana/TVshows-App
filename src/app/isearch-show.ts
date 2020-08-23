@@ -1,5 +1,5 @@
 export interface ISearchShow {
-
+showid : number
 showName: string
 avgRating:number
 officialSite:string

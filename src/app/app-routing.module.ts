@@ -3,10 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { CurrentShowsComponent } from './Components/current-shows/current-shows.component';
 import { SeasonsEpisodesComponent } from './Components/seasons-episodes/seasons-episodes.component';
 import { CurrentScheduleComponent } from './Components/current-schedule/current-schedule.component';
+import { SearchShowComponent } from './Components/search-show/search-show.component';
+
 const routes: Routes = [
  {path:'',component:CurrentShowsComponent},
  {path:'show/:showid',component:SeasonsEpisodesComponent},
- {path:'show/schedule/:curDate',component:CurrentScheduleComponent}
+ {path:'shows/schedule/:curDate',component:CurrentScheduleComponent},
+ {path:'shows/search',component:SearchShowComponent}
   
 ];
 

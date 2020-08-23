@@ -22,6 +22,7 @@
   </div>
 </header>
 -->
+<!--  -->
 <div *ngIf="searchShow">
 
   <div>
@@ -30,7 +31,7 @@
     <div  class="showresult">
        <!--<img [src]="s.image" /> -->
           
-    <img [src]="s.image"  width ="250" height="350">
+    <img [src]="s.image"  width ="250" height="350" (click)="getshowsdetails(s.showid)">
       <div> <mat-card-title>{{ s.showName }}</mat-card-title>
     <mat-card-subtitle>Average Rating : {{s.avgRating}}</mat-card-subtitle>
   </div> 

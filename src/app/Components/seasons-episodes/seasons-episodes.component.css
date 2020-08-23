@@ -8,3 +8,10 @@ mat-label{
 mat-form-field{
   background-color: rgb(10, 14, 17);
 }
+
+.details{
+  display:table;
+  float:left;
+  
+}
+

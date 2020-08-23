@@ -1,9 +1,12 @@
-<div *ngIf="Scastsummary">
-  <div>{{showid}}</div>
-  <img [src]='Scastsummary?.image.medium' alt="Avatar" class="image" >
-  <div>Show Name :{{Scastsummary.name}}</div>
-  <div>Show Summary:{{Scastsummary.summary}}</div>
-  <div>Show schedule:{{Scastsummary.schedule.time}}</div>
+<div>
+  
+  <div *ngIf="Scastsummary" class="details">
+  <!-- <div>{{showid}}</div> -->
+  <img [src]='Scastsummary?.image.medium' alt="Avatar" class="image">
+  
+ Show Name :{{Scastsummary.name}}<br>
+  Show Summary:{{Scastsummary.summary}}
+  Show schedule:{{Scastsummary.schedule.time}}
   <div *ngFor="let day of Scastsummary.schedule.days">Schedule days:{{day}}</div>
   <div fxLayout="row">
     <span>Cast:</span>
@@ -21,7 +24,7 @@
       </mat-select>
     </mat-form-field>
    
-  </div> 
+
   <div *ngFor="let episode of episodes">
     <li><img [src]='episode.image.medium'></li>
     <li>{{episode.number}}</li>

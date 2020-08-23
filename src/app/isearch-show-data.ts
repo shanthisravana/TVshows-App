@@ -1,5 +1,6 @@
 export interface ISearchShowData {
   show:{
+      id:number
       name:string,
       language:string,
       runtime:number,

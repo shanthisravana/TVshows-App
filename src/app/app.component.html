@@ -8,16 +8,17 @@
     <span class="logo"><mat-icon>school</mat-icon> KAL TV academy</span> 
    <div class="homebar"></div> 
    <a mat-button >Home</a>
-   <a mat-button >Action</a>
-   <a mat-button>Comedy</a>
-   <a mat-button>Drama</a>
-   <a mat-button>Schedules</a>
+   <a mat-button >Action</a><br>
+   <a mat-button>Comedy</a><br>
+   <a mat-button>Drama</a><br>
+   <a mat-button (click)="getshowschedule()">Schedules</a>
    <div class="seabar"></div>
     <div fxLayout="row" fxLayoutAlign="center">
-      <app-searchbar (searchEvent)="doSearch($event)"></app-searchbar>
+      <app-searchbar (searchEvent)="doSearch($event)" [routerLink]="['/shows/search']"></app-searchbar>
       </div>
    
   </mat-toolbar>
+
   <div fxlayout="row" fxLayoutAlign="center">
     <div fxFlex> </div>
     <div fxFlex="100%">
@@ -26,13 +27,7 @@
       </mat-card>
     </div>
     <div fxFlex></div>
-</div>
-<div>
-<mat-card>
-<!--<app-current-schedule></app-current-schedule>--> 
-</mat-card>
-
-</div>
+  </div>
 
 </div>
  <router-outlet></router-outlet>

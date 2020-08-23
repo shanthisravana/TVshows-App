@@ -31,7 +31,8 @@ export class SearchService {
         console.log("This show is " + showElement.show.name);
         console.log("Image URL is " + showElement.show.image?.medium);
 
-        result.push({                  
+        result.push({             
+            showid : showElement.show.id,     
             showName: showElement.show.name,
             language: showElement.show.language,
             avgRating: showElement.show.rating.average,
