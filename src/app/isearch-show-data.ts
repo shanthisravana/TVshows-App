@@ -5,10 +5,10 @@ export interface ISearchShowData {
       language:string,
       runtime:number,
       officialSite:string,
-      genre:string,
+      genre:[],
       schedule:{
         time:Date
-        days:string
+        days:[]
       },
 
       rating:{

@@ -27,6 +27,8 @@ a.logo{
   float:left;
 }
 
+
+
 nav{
   float:right;  
   
@@ -41,5 +43,16 @@ li a{
 }
 
 a:hover{
-background:darkgrey;
+background:darkgray;
   }
+  img {
+    background-image: url('/assets/images/broken.png');
+    background-size:250px 350px;
+    
+ }
+ .text{
+   float:left;
+ }
+.imagedisp{
+  float:left;
+}
