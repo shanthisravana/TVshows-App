@@ -9,7 +9,7 @@ export interface ICurrentShowsData {
         medium : string
       }
     
-  
+  genre:[]
       }
   
 
