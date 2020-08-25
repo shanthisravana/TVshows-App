@@ -20,6 +20,7 @@ export class AppComponent {
   doSearch(searchValue)
   {
     this.SearchService.getSearchResult(searchValue).subscribe(data => this.currentShowName = data);
+    console.log(this.currentShowName);
       
       
      // window.location.href=`/shows/search`;

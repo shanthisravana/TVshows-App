@@ -15,18 +15,16 @@
    <a mat-button (click)="getshowschedule()">Schedules</a>
    <div class="seabar"></div>
     <div fxLayout="row" fxLayoutAlign="center">
-      <app-searchbar (searchEvent)="doSearch($event)" ></app-searchbar>
-      </div>
+      <app-searchbar (searchEvent)="doSearch($event)" [routerLink]="['/shows/search']"></app-searchbar>
+    </div>
    
   </mat-toolbar>
 
   <div fxlayout="row" fxLayoutAlign="center">
     <div fxFlex> </div>
     <div fxFlex="100%" >
-      <mat-card >
-        <app-search-show [searchShow]="currentShowName"></app-search-show>
-      </mat-card>
-    </div>
+              <app-search-show [searchShow]="currentShowName" ></app-search-show> 
+      </div>
     <div fxFlex></div>
   </div>
 
