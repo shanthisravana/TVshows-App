@@ -13,7 +13,6 @@ export class SearchShowComponent implements OnInit {
   currentShowName:ISearchShow[];
   @Input() searchShow:ISearchShow[]
   constructor(private route: ActivatedRoute,private SearchService: SearchService) {
- 
    }
 
   ngOnInit(): void {

@@ -1,12 +1,13 @@
-<div *ngIf="schedules">
-  <h3>Today's Schedule {{currentdate}}</h3>
-  <div class="col-sm-3" *ngFor="let schedule of schedules">
-    <div >
+<div *ngIf="schedules" id="body" >
+  <h2 id="body"> Today's Schedule {{currentdate}}</h2>
+  <div class="col-sm-3" style="float: left;" id="body"  *ngFor="let row of schedules  | keyvalue" >
+    <div *ngFor="let val of row | keyvalue"  >
       
-    <mat-card>
-      <mat-card-content>{{schedule?.show.name}}</mat-card-content>
-      <mat-card-content>{{schedule?.show.schedule.time}}</mat-card-content>
-      <mat-card-content>{{schedule?.show.network.name}}</mat-card-content>
+        
+    <mat-card class="schedule" >
+      <mat-card-content>Show: {{val[row]}}</mat-card-content>
+      <mat-card-content>Time: {{val[row]}}</mat-card-content>
+      <mat-card-content>Channel: {{val[row]}}</mat-card-content>
       </mat-card>
     </div>
   </div>

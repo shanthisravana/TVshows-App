@@ -23,21 +23,27 @@
 </header>
 -->
 <!--  -->
-<div *ngIf="searchShow">
-
-  <div>
-    <!--<span>Number of shows is {{searchShow .length}}, {{searchShow.country}}</span>--> 
-    <div *ngFor="let s of searchShow; let i = index">
-    <div  class="showresult">
-       <!--<img [src]="s.image" /> -->
-          
-    <img [src]="s.image"  width ="250" height="350" (click)="getshowsdetails(s.showid)">
-      <div> <mat-card-title>{{ s.showName }}</mat-card-title>
-    <mat-card-subtitle>Average Rating : {{s.avgRating}}</mat-card-subtitle>
-  </div> 
+<div *ngIf="searchShow?.length > 0; else errormessage">
+     <!--<span>Number of shows is {{searchShow .length}}, {{searchShow.country}}</span>--> 
+  <div class="box" *ngFor="let s of searchShow; let i = index" text-align="center">        
+      <div class="imgbox">
+        <img [src]="s.image"  width ="250" height="350" (click)="getshowsdetails(s.showid)">
+      </div>
+      <div class="content">
+        <h1 class="heading"> <b>{{ s.showName }}</b></h1>  
+        <mat-icon>star </mat-icon> <span> {{s.avgRating}}</span> 
+        <p>{{s?.language}}</p>
+        <p>{{s?.times}}</p> 
+        <p >{{s?.runTime}} minutes</p>   
+        <p class="url">{{s.officialSite}}</p> 
+          <p>{{s.description}}</p>      
+      </div>
     </div>
-    
-    <br/>
-</div>
-</div>
+</div>   
 
+<ng-template  #errormessage>
+  <ng-container *ngIf="(searchShow?.length === 0);" >
+    <div class="errorshow">
+      <p  >no such movies</p></div>
+  </ng-container>
+</ng-template>
