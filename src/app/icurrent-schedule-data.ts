@@ -15,6 +15,9 @@ export interface ICurrentScheduleData {
     code : string
     timezone : string
   }
+    webChannel: {
+    name:string
+  }
 
 }
 }

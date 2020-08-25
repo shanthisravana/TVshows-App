@@ -10,7 +10,7 @@
   <div *ngFor="let day of Scastsummary.schedule.days">Schedule days: {{day}} <br><br></div>
   <div fxLayout="row">
     <span>Cast: </span>
-    <p *ngFor="let cast of Scastsummary._embedded.cast">{{cast?.person.name}}, <br> </p>
+    <span *ngFor="let cast of Scastsummary._embedded.cast">{{cast?.person.name}}, </span>
   </div>
  
   <div>Seasons: {{seasons?.length}}<br><br>

@@ -25,16 +25,19 @@ export class CurrentScheduleComponent implements OnInit {
     this.countrycode = 'US';
     this.showSchedule.getCurrentSchedule(this.countrycode,this.currentdate).subscribe((data) => {
       var showTimeMap = {};
-
+      
       for(var show in data) {
         let showtime = data[show].show.schedule.time;
+        
         if(Object.keys(showTimeMap).indexOf(showtime) === -1 ) {
           showTimeMap[showtime] = [data[show]];
         } else {
           showTimeMap[showtime].push(data[show]);
         } 
+       
       }
       console.log("DATA", data);
+     
       console.log("Showtime map", showTimeMap);
       
       
