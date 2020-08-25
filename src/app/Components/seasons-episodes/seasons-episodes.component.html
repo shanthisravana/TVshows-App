@@ -8,12 +8,16 @@
   <div >Show Summary: {{Scastsummary.summary}}<br><br></div>
   <div>Show schedule: {{Scastsummary.schedule.time}}<br><br></div>
   <div *ngFor="let day of Scastsummary.schedule.days">Schedule days: {{day}} <br><br></div>
-  <div fxLayout="row">
-    <span>Cast: </span>
-    <span *ngFor="let cast of Scastsummary._embedded.cast">{{cast?.person.name}}, </span>
+  <span>Cast:</span>
+  <div >
+    <div>
+      <span *ngFor="let cast of Scastsummary._embedded.cast" style=" float:left"> {{cast?.person.name}},</span> 
+    </div>
+    
+    <span><br></span>
   </div>
  
-  <div>Seasons: {{seasons?.length}}<br><br>
+  <div style="margin-top: 15px;">Seasons: {{seasons?.length}}
   <div> 
     <mat-form-field appearance="standard">
       <mat-label>Season </mat-label>
