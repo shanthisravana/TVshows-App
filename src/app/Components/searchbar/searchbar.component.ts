@@ -1,11 +1,12 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import {debounceTime} from 'rxjs/operators'
+import {debounceTime} from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-searchbar',
-  templateUrl: './../../Components/searchbar/searchbar.component.html',
-  styleUrls: ['./../../Components/searchbar/searchbar.component.css']
+  templateUrl: './searchbar.component.html',
+  styleUrls: ['./searchbar.component.css']
 })
 export class SearchbarComponent implements OnInit {
 
@@ -13,7 +14,7 @@ export class SearchbarComponent implements OnInit {
   
 search=new FormControl('',[Validators.minLength(2)]);
 
-constructor() { }
+constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.search.valueChanges.pipe(debounceTime(1000)).subscribe(data =>

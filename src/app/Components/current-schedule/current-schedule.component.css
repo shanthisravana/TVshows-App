@@ -1,3 +1,18 @@
+
+
+.schedulepage{
+  background-image: url('/assets/images/tv.png');
+  display: inline-block;
+  width:100%;
+  
+}
+
 mat-card{
-  float:auto;
+  margin:15px;
+  position: relative;
+  
+  
+}
+mat-card-content{
+  text-align: center;
 }

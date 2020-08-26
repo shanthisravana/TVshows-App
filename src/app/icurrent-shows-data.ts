@@ -8,8 +8,8 @@ export interface ICurrentShowsData {
       image : {
         medium : string
       }
-    
-  genre:[]
+      genre :[]
+  
       }
   
 

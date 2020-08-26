@@ -20,4 +20,9 @@ a:hover{
 }
 .seabar{
   flex:1 1 auto;
+  
+}
+
+.homepage{
+  background-image: url('/assets/images/tv.png');
 }

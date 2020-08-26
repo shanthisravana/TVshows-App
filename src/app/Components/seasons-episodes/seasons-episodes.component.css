@@ -12,6 +12,19 @@ mat-form-field{
 .details{
   display:table;
   float:left;
-  
+  font-weight: bold;
+  width:100%;
+  height:100%;
+  margin-top: 15px;
+  background-image: url('/assets/images/tv.png');
+  border-style: groove;
+  border:2px solid black; 
+}
+body{
+  color:white;
+margin:0;
+padding:0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size:18px;
 }
 

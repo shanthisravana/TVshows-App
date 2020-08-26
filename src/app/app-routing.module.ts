@@ -4,6 +4,7 @@ import { CurrentShowsComponent } from './Components/current-shows/current-shows.
 import { SeasonsEpisodesComponent } from './Components/seasons-episodes/seasons-episodes.component';
 import { CurrentScheduleComponent } from './Components/current-schedule/current-schedule.component';
 import { SearchShowComponent } from './Components/search-show/search-show.component';
+import { SearchbarComponent } from './Components/searchbar/searchbar.component';
 
 const routes: Routes = [
  {path:'',component:CurrentShowsComponent},

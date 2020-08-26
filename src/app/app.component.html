@@ -1,15 +1,14 @@
 
-<div>
+<div class="homepage">
  <!-- <app-current-shows class="view"></app-current-shows>  -->
  <!-- <app-seasons-episodes></app-seasons-episodes> -->
 
- <div style="text-align: center;">
-  
+ <div style="text-align: center; ">
   <mat-toolbar color="accent" class="mat-elevation-z8" class="toolbar logo">
-    <span class="logo"><mat-icon>school</mat-icon> KAL TV academy</span> 
+    <span class="logo" (click)="gethomepage()"><mat-icon>school</mat-icon> KAL TV academy</span> 
    <div class="homebar"></div> 
-   <a mat-button>Home</a>
-   <a mat-button>Action</a><br>
+   <a mat-button (click)="gethomepage()">Home</a>
+   <a mat-button >Action</a><br>
    <a mat-button>Comedy</a><br>
    <a mat-button>Drama</a><br>
    <a mat-button (click)="getshowschedule()">Schedules</a>
@@ -22,9 +21,11 @@
 
   <div fxlayout="row" fxLayoutAlign="center">
     <div fxFlex> </div>
-    <div fxFlex="100%" >
-              <app-search-show [searchShow]="currentShowName" ></app-search-show> 
-      </div>
+    <div fxFlex="100%">
+      
+        <app-search-show [searchShow]="currentShowName"></app-search-show>
+      
+    </div>
     <div fxFlex></div>
   </div>
 

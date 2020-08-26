@@ -20,7 +20,20 @@ export class SeasonsEpisodesComponent implements OnInit {
 
   ngOnInit(): void {
     this.showid = this.route.snapshot.params.showid;
-    this.showdetails.getcastandsummary(this.showid).subscribe(data => this.Scastsummary = data);
+    this.showdetails.getcastandsummary(this.showid).subscribe((data) =>{
+  
+      var re = /<[^>]+>/g;
+  
+      let presummary = data.summary;
+      let validstring=presummary.replace(re, '');
+      console.log("summary:"+validstring);
+      data.summary=validstring;
+    
+      this.Scastsummary = data;
+    
+  });
+      
+    
     this.showdetails.getseasons(this.showid).subscribe(data => this.seasons = data);
     
     
@@ -35,6 +48,6 @@ export class SeasonsEpisodesComponent implements OnInit {
   }
    
   }
-
+  
 
 }
