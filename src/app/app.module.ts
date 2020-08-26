@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CurrentShowsComponent } from './Components/current-shows/current-shows.component';
-import { ShowsService } from './Services/shows/shows.service';
+import { ShowsService } from './Services/shows.service';
 import { HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCard, MatCardModule } from '@angular/material/card';
@@ -22,6 +22,7 @@ import { CommonModule } from '@angular/common';
 import { SearchService } from './../app/Services/search.service';
 import { SearchShowComponent } from './../app/Components/search-show/search-show.component';
 import { SearchbarComponent } from './../app/Components/searchbar/searchbar.component';
+import { ShowBasedOnGenreComponent } from './Components/show-based-on-genre/show-based-on-genre.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { SearchbarComponent } from './../app/Components/searchbar/searchbar.comp
     SeasonsEpisodesComponent,
     CurrentScheduleComponent,
     SearchbarComponent,
-    SearchShowComponent
+    SearchShowComponent,
+    ShowBasedOnGenreComponent
   
   ],
   imports: [

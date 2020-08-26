@@ -5,12 +5,15 @@ import { SeasonsEpisodesComponent } from './Components/seasons-episodes/seasons-
 import { CurrentScheduleComponent } from './Components/current-schedule/current-schedule.component';
 import { SearchShowComponent } from './Components/search-show/search-show.component';
 import { SearchbarComponent } from './Components/searchbar/searchbar.component';
+import { ShowBasedOnGenreComponent } from './Components/show-based-on-genre/show-based-on-genre.component';
 
 const routes: Routes = [
  {path:'',component:CurrentShowsComponent},
  {path:'show/:showid',component:SeasonsEpisodesComponent},
  {path:'shows/schedule/:curDate',component:CurrentScheduleComponent},
- {path:'shows/search',component:SearchShowComponent}
+  { path: 'shows/search', component: SearchShowComponent },
+  {path:'shows/genre/:filter',component: ShowBasedOnGenreComponent}
+ 
   
 ];
 

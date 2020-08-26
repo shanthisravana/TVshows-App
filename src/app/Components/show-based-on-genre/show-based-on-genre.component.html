@@ -1,0 +1,10 @@
+
+<div class="container" *ngIf="filteredlistafter" >
+  <div class="row" >
+    <div class="col-sm-3" *ngFor="let show of filteredlistafter">
+      <img [src]='show?.image' alt="Avatar" class="image" (click)="getshowsdetails(show?.id)">
+      <div id="show_name">{{show?.name}}</div>
+    </div>
+    
+  </div>
+</div>

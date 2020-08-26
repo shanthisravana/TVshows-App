@@ -26,3 +26,46 @@ a:hover{
 .homepage{
   background-image: url('/assets/images/tv.png');
 }
+
+
+.container{
+  background-image: url('/assets/images/tv.png');
+  margin-top: 50px;
+  width:100%;
+  height:100%;
+}
+#show_name {
+  font-weight: bold;
+  text-align: center;
+  padding-right: 30px;
+}
+
+.col-sm-3 {
+  padding-bottom: 25px;
+  
+  
+}
+
+.row{
+  background-image: url('/assets/images/tv.png');
+}
+
+.toolbar{
+  margin-bottom: 30px;
+  width:100%;
+
+}
+
+#searchbox{
+  text-align: left;
+  margin:right;
+  width:60%;
+  margin-left: 50%;
+
+}
+
+body{
+  background-image: url('/assets/images/tv.png');
+  width:100%;
+  height:100%;
+}
