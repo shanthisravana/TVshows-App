@@ -2,7 +2,8 @@ import { DecimalPipe } from '@angular/common';
 
 export interface IShowCastAndSummaryData {
   id : number
-  name : string
+  name: string
+  language: string
   image : {
     medium : string
   }
@@ -21,7 +22,9 @@ export interface IShowCastAndSummaryData {
       time : string
       days :[]
     }
-    rating : number
+  rating: {
+     average:number 
+    }
   }
 
 

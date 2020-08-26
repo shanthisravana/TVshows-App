@@ -55,7 +55,26 @@ export class SeasonsEpisodesComponent implements OnInit {
    this.seasonid=eventparam.value;
    console.log("seasonid:"+eventparam.value);
    if (this.seasonid != undefined){
-    this.showdetails.getseasonepisodes(this.seasonid).subscribe(data => this.episodes = data);
+     this.showdetails.getseasonepisodes(this.seasonid).subscribe(data => {
+      
+  
+        var re = /<[^>]+>/g;
+         for (var i in data) {
+          let presummary = data[i].summary;
+        let validstring=presummary.replace(re, '');
+        console.log("summary:"+validstring);
+        data[i].summary = validstring;
+        
+        }
+        
+       
+      
+        
+         this.episodes = data;
+      
+        
+    });
+    
   }
    
   }

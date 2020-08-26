@@ -12,15 +12,15 @@ import { ShowsService } from '../../Services/shows/shows.service';
 export class CurrentShowsComponent implements OnInit {
   
 
-  allshows;
   
+  allshows;
   
   constructor(private showsService : ShowsService) {
      
     
   }
   ngOnInit(): void {
-    this.showsService.getcurrentshows().subscribe(data => this.allshows = data);
+    this.showsService.getcurrentshows().subscribe(data =>  this.allshows=data );
 
 
   }

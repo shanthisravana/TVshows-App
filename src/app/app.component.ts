@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { ISearchShow } from './../app/isearch-show';
 import { SearchService } from './../app/Services/search.service';
 import { formatDate } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { ShowsService } from './Services/shows/shows.service';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,13 @@ import { ActivatedRoute } from '@angular/router';
 export class AppComponent {
   title = 'TVshows-App';
   myDate = new Date();
-  currentShowName:ISearchShow[];
+  currentShowName: ISearchShow[];
+  
+ 
 
-  constructor(private SearchService:SearchService,private route: ActivatedRoute){}
+
+
+  constructor(private SearchService:SearchService,private route: ActivatedRoute,private ShowService:ShowsService){}
  
   doSearch(searchValue)
   {
@@ -32,4 +37,14 @@ export class AppComponent {
  {
    window.location.href=``;
  }
+  
+  getShowsByGenre(event) {
+    var filter = event.id;
+    console.log("valuegenre:" + event.id);
+    
+  
+    window.location.href=`/shows/genre/${filter}`;
+  }
+  
+ 
 }

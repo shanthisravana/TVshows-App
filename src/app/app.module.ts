@@ -22,6 +22,7 @@ import { CommonModule } from '@angular/common';
 import { SearchService } from './../app/Services/search.service';
 import { SearchShowComponent } from './../app/Components/search-show/search-show.component';
 import { SearchbarComponent } from './../app/Components/searchbar/searchbar.component';
+import { ShowBasedOnGenreComponent } from './Components/show-based-on-genre/show-based-on-genre.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { SearchbarComponent } from './../app/Components/searchbar/searchbar.comp
     SeasonsEpisodesComponent,
     CurrentScheduleComponent,
     SearchbarComponent,
-    SearchShowComponent
+    SearchShowComponent,
+    ShowBasedOnGenreComponent
   
   ],
   imports: [

@@ -7,10 +7,10 @@
   <mat-toolbar color="accent" class="mat-elevation-z8" class="toolbar logo">
     <span class="logo" (click)="gethomepage()"><mat-icon>school</mat-icon> KAL TV academy</span> 
    <div class="homebar"></div> 
-   <a mat-button (click)="gethomepage()">Home</a>
-   <a mat-button >Action</a><br>
-   <a mat-button>Comedy</a><br>
-   <a mat-button>Drama</a><br>
+   <a mat-button  (click)="gethomepage()">Home</a>
+   <a mat-button #Action id="Action" (click)="getShowsByGenre(Action)">Action</a><br>
+   <a mat-button  #Comedy id="Comedy" (click)="getShowsByGenre(Comedy)">Comedy</a><br>
+   <a mat-button  #Drama id="Drama" (click)="getShowsByGenre(Drama)">Drama</a><br>
    <a mat-button (click)="getshowschedule()">Schedules</a>
    <div class="seabar"></div>
     <div fxLayout="row" fxLayoutAlign="center">
@@ -30,5 +30,8 @@
   </div>
 
 </div>
+
+
+
  <router-outlet></router-outlet>
 </div>
