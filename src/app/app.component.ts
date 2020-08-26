@@ -3,7 +3,7 @@ import { ISearchShow } from './../app/isearch-show';
 import { SearchService } from './../app/Services/search.service';
 import { formatDate } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { ShowsService } from './Services/shows/shows.service';
+import { ShowsService } from './Services/shows.service';
 
 @Component({
   selector: 'app-root',

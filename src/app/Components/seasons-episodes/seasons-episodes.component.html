@@ -4,10 +4,11 @@
   <!-- <div>{{showid}}</div> -->
   <img [src]='Scastsummary?.image.medium' width ="250" height="350" alt="Avatar" class="image" style="float: left;">
   
-  <div><br>Show Name : {{Scastsummary?.name}}<br></div>
+  <div style=" color:orangered; font-size: larger;"><br>Show Name : {{Scastsummary?.name}}<br></div>
+  <div> <br><mat-icon>star </mat-icon> {{Scastsummary.rating?.average}}<br></div>
   <div ><br>Show Summary: {{Scastsummary?.summary}}<br></div>
   <div><br>Show schedule: {{Scastsummary?.schedule.time}}<br></div>
-  <div><br>Show Rating: {{Scastsummary.rating?.average}}<br></div>
+  
   <div><br>Language: {{Scastsummary?.language}}<br></div>
   <div *ngFor="let day of Scastsummary.schedule.days"><br>Schedule days: {{day}}<br></div>
   <span><br>Cast:</span>

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ShowsService } from 'src/app/Services/shows/shows.service';
+import { ShowsService } from 'src/app/Services/shows.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

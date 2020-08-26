@@ -1,6 +1,6 @@
 import { Component, OnInit, ɵCompiler_compileModuleAndAllComponentsSync__POST_R3__, Output,EventEmitter } from '@angular/core';
 import { CompiledStylesheet } from '@angular/compiler';
-import { ShowsService } from '../../Services/shows/shows.service';
+import { ShowsService } from '../../Services/shows.service';
 
 
 
