@@ -3,10 +3,10 @@ showid : number
 showName: string
 avgRating:number
 officialSite:string
-genre:string
+genre:Array<string>
 image:string
 description:string
-day:string
+day:Array<String>
 times:Date
 runTime:number
 language:string
